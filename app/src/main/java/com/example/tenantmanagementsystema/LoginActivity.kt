@@ -1,7 +1,7 @@
 package com.example.tenantmanagementsystema
-import android.net.Uri
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("EMAIL", email)   // <-- Step 15: send the email to MainActivity
             startActivity(intent)
             finish()
         }
